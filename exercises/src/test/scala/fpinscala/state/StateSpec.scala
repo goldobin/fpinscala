@@ -38,7 +38,7 @@ class StateSpec extends FlatSpec with MustMatchers {
     }.toList
 
     val transformation1 = State.simulateMachine(inputs)
-    val transformation2 = State.simulateMachine(Turn :: inputs)
+    val transformation2 = State.simulateMachine(Coin :: inputs)
     val transformation3 = State.simulateMachine(Turn :: inputs)
 
     val initialState = Machine(locked = true, coins = 10, candies = 5)
